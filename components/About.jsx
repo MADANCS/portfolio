@@ -20,7 +20,7 @@ export default function About() {
         {/* Editorial Signature Statement with Inline Avatars & Icons */}
         <div className="text-center max-w-4xl mx-auto">
           <p className="text-3xl sm:text-5xl font-extrabold text-neutral-900 dark:text-white leading-[1.3] sm:leading-[1.25] tracking-tight">
-            Hello! <span className="text-brand-orange">I'm </span>
+            Hello! <span className="text-brand-orange">I&apos;m </span>
             
             {/* Inline Avatar Pill with Madan Photo */}
             <span className="inline-flex items-center align-middle mx-1.5 p-0.5 rounded-full border-2 border-brand-orange bg-cream-200 dark:bg-neutral-800">

@@ -36,7 +36,7 @@ export default function Hero() {
               </div>
 
               <h1 className="text-4xl sm:text-6xl lg:text-7xl font-black tracking-tighter text-neutral-900 dark:text-white leading-[1.05]">
-                Hello, I'm <br className="hidden sm:inline" />
+                Hello, I&apos;m <br className="hidden sm:inline" />
                 <span className="text-brand-orange">Madan C S.</span>
               </h1>
               
@@ -155,7 +155,7 @@ export default function Hero() {
             <div className="absolute top-10 -left-4 sm:top-14 sm:-left-8 z-20 hidden sm:flex items-center gap-3 bg-white/95 dark:bg-neutral-900/95 backdrop-blur-md p-3 px-5 rounded-2xl border border-neutral-200 dark:border-neutral-800 shadow-2xl">
               <span className="text-2xl">👋</span>
               <div>
-                <span className="text-xs font-semibold text-neutral-400 block leading-none">Hello, I'm</span>
+                <span className="text-xs font-semibold text-neutral-400 block leading-none">Hello, I&apos;m</span>
                 <span className="text-sm font-black text-brand-orange leading-tight">Madan C S.</span>
               </div>
             </div>
