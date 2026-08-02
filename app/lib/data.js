@@ -9,7 +9,7 @@ export const portfolioData = {
     linkedin: "https://www.linkedin.com/in/madan-c-s-084492246/",
     resumes: {
       java: "https://drive.google.com/file/d/1IFeXVwz43aPLKL93EbgBAnqmzBk-dDWe/view?usp=sharing",
-      mern: "https://drive.google.com/file/d/1-fLv8yQNfIUlLGMWOH2bnfNYFPVQNbcA/view?usp=sharing",
+      mern: "https://drive.google.com/file/d/1OUFvbkq-XUsB8yCrcKvh75VQIb0OvFSu/view?usp=sharing",
     },
     avatar: "/madan.jpg",
   },
@@ -161,32 +161,32 @@ export const portfolioData = {
 
   education: [
     {
-      degree: "Master of Computer Applications - MCA",
-      institution: "Sir M Visvesvaraya Institute Of Technology",
-      university: "Visvesvaraya Technological University",
+      degree: "Master of Computer Applications (MCA)",
+      institution: "Sir M Visvesvaraya Institute of Technology",
+      university: "Visvesvaraya Technological University (VTU)",
       year: "2024 – 2026",
-      details: "Specialized in advanced computing, software engineering, cloud architecture, and full-stack web development."
+      details: "Advanced specialization in Enterprise Software Engineering, Distributed Systems, Cloud Architecture, and Full-Stack Development (Java & MERN Stack). Focus on scalable system design, microservices, and modern web application development."
     },
     {
       degree: "Bachelor of Computer Applications (BCA)",
       institution: "Tumkur University",
       university: "Tumkur University",
       year: "2021 – 2024",
-      details: "Computer Application specialization focusing on programming fundamentals, data structures, and database management."
+      details: "Core Computer Science foundation specializing in Object-Oriented Programming (Java/C++), Data Structures & Algorithms (DSA), Relational Database Design (SQL), and Web Development."
     },
     {
       degree: "Pre-University Course (PUC)",
-      institution: "Gurukula PU College Tiptur",
-      university: "Karnataka State Board",
+      institution: "Gurukula PU College, Tiptur",
+      university: "Karnataka State Board (PUE)",
       year: "2019 – 2021",
-      details: "Pre-University Education."
+      details: "Higher secondary education specializing in Science & Mathematics, establishing strong analytical, mathematical, and logical problem-solving skills for technical computing."
     },
     {
-      degree: "SSLC (Secondary School Leaving Certificate)",
-      institution: "Gurukula English Medium High School Tiptur",
-      university: "KSEEB",
+      degree: "Secondary School Leaving Certificate (SSLC)",
+      institution: "Gurukula English Medium High School, Tiptur",
+      university: "KSEEB Board",
       year: "2019",
-      details: "Secondary School Leaving Certificate."
+      details: "Secondary education foundational coursework with excellence in Mathematics, Science, and English, developing strong foundational reasoning and computer literacy."
     },
   ],
 

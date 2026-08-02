@@ -36,12 +36,12 @@ export default function Hero() {
               </div>
 
               <h1 className="text-4xl sm:text-6xl lg:text-7xl font-black tracking-tighter text-neutral-900 dark:text-white leading-[1.05]">
-                Hi! I Am <br className="hidden sm:inline" />
+                Hello, I'm <br className="hidden sm:inline" />
                 <span className="text-brand-orange">Madan C S.</span>
               </h1>
               
               <div className="text-2xl sm:text-3xl font-extrabold text-neutral-800 dark:text-neutral-200 tracking-tight">
-                Full-Stack &amp; Java Developer
+                Full Stack Developer(Java + Mern Stack)
               </div>
             </div>
 
@@ -120,7 +120,7 @@ export default function Hero() {
               <div className="absolute bottom-5 left-5 right-5 p-4 rounded-2xl bg-white/90 dark:bg-neutral-900/90 backdrop-blur-md border border-neutral-200/50 dark:border-neutral-700/50 shadow-xl flex items-center justify-between">
                 <div>
                   <h3 className="text-base font-black text-neutral-900 dark:text-white leading-tight">Madan C S</h3>
-                  <p className="text-xs font-medium text-brand-orange">Full-Stack &amp; Java Developer</p>
+                  <p className="text-xs font-medium text-brand-orange">Full Stack Developer(Java + Mern Stack)</p>
                 </div>
                 <div className="w-3 h-3 rounded-full bg-emerald-500 ring-4 ring-emerald-500/30"></div>
               </div>
@@ -155,7 +155,7 @@ export default function Hero() {
             <div className="absolute top-10 -left-4 sm:top-14 sm:-left-8 z-20 hidden sm:flex items-center gap-3 bg-white/95 dark:bg-neutral-900/95 backdrop-blur-md p-3 px-5 rounded-2xl border border-neutral-200 dark:border-neutral-800 shadow-2xl">
               <span className="text-2xl">👋</span>
               <div>
-                <span className="text-xs font-semibold text-neutral-400 block leading-none">Hi! I Am</span>
+                <span className="text-xs font-semibold text-neutral-400 block leading-none">Hello, I'm</span>
                 <span className="text-sm font-black text-brand-orange leading-tight">Madan C S.</span>
               </div>
             </div>

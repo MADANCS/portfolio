@@ -1,9 +1,49 @@
 'use client';
 
-import { Monitor, Server, Database, Wrench, Cpu, Zap, ShieldCheck } from 'lucide-react';
+import { 
+  Monitor, Server, Database, Wrench, Cpu, Zap, ShieldCheck,
+  Atom, Leaf, Coffee, Lock, Shield, Cloud, Box, GitBranch,
+  Send, Workflow, Kanban, Binary, Repeat, Table,
+  Smartphone, Layers, HardDrive, Power, RefreshCw, GitFork, LayoutGrid, Radio, Share2, Code2
+} from 'lucide-react';
 import { portfolioData } from '@/app/lib/data';
 
 const iconMap = { Monitor, Server, Database, Wrench };
+
+// Realistic symbol & color mapping for each technology skill
+const techIconsMap = {
+  // Web Dev (MERN)
+  "MongoDB": { icon: Leaf, color: "text-emerald-500 bg-emerald-500/10 border-emerald-500/20" },
+  "Express.js": { icon: Server, color: "text-neutral-400 bg-neutral-500/10 border-neutral-500/20" },
+  "React.js": { icon: Atom, color: "text-cyan-400 bg-cyan-500/10 border-cyan-500/20" },
+  "Node.js": { icon: Cpu, color: "text-green-500 bg-green-500/10 border-green-500/20" },
+  "Responsive UI/UX": { icon: Smartphone, color: "text-sky-400 bg-sky-500/10 border-sky-500/20" },
+  "Redux / State Management": { icon: Layers, color: "text-purple-400 bg-purple-500/10 border-purple-500/20" },
+  "Real-time features with Socket.io": { icon: Radio, color: "text-amber-400 bg-amber-500/10 border-amber-500/20" },
+  "RESTful API integration": { icon: Share2, color: "text-blue-400 bg-blue-500/10 border-blue-500/20" },
+  "Redis (caching & real-time data)": { icon: HardDrive, color: "text-red-400 bg-red-500/10 border-red-500/20" },
+
+  // Backend & Cloud
+  "Java": { icon: Coffee, color: "text-orange-500 bg-orange-500/10 border-orange-500/20" },
+  "Spring Boot": { icon: Power, color: "text-lime-500 bg-lime-500/10 border-lime-500/20" },
+  "Spring Security": { icon: Lock, color: "text-emerald-400 bg-emerald-500/10 border-emerald-500/20" },
+  "Spring Data JPA": { icon: Database, color: "text-blue-400 bg-blue-500/10 border-blue-500/20" },
+  "Hibernate": { icon: RefreshCw, color: "text-amber-500 bg-amber-500/10 border-amber-500/20" },
+  "Microservices Architecture": { icon: Box, color: "text-indigo-400 bg-indigo-500/10 border-indigo-500/20" },
+  "RESTful API Design": { icon: Workflow, color: "text-cyan-400 bg-cyan-500/10 border-cyan-500/20" },
+  "Docker & Kubernetes": { icon: Box, color: "text-sky-400 bg-sky-500/10 border-sky-500/20" },
+  "AWS (Cloud Essentials)": { icon: Cloud, color: "text-amber-500 bg-amber-500/10 border-amber-500/20" },
+  "CI/CD Pipelines": { icon: Repeat, color: "text-emerald-400 bg-emerald-500/10 border-emerald-500/20" },
+  "Database Design (SQL & NoSQL)": { icon: Table, color: "text-purple-400 bg-purple-500/10 border-purple-500/20" },
+
+  // Tools & Practices
+  "Git & GitHub": { icon: GitBranch, color: "text-orange-400 bg-orange-500/10 border-orange-500/20" },
+  "Postman": { icon: Send, color: "text-amber-500 bg-amber-500/10 border-amber-500/20" },
+  "OOP Principles": { icon: Binary, color: "text-violet-400 bg-violet-500/10 border-violet-500/20" },
+  "Data Structures & Algorithms": { icon: GitFork, color: "text-teal-400 bg-teal-500/10 border-teal-500/20" },
+  "System Design": { icon: LayoutGrid, color: "text-blue-400 bg-blue-500/10 border-blue-500/20" },
+  "Agile & SDLC": { icon: Kanban, color: "text-rose-400 bg-rose-500/10 border-rose-500/20" },
+};
 
 export default function Skills() {
   const marqueeSkills = portfolioData.skills.marquee;
@@ -56,7 +96,7 @@ export default function Skills() {
 
         {/* Category Cards Grid */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          {categories.map((category, idx) => {
+          {categories.map((category) => {
             const IconComponent = iconMap[category.icon] || Cpu;
             return (
               <div
@@ -71,15 +111,20 @@ export default function Skills() {
                     {category.title}
                   </h3>
 
-                  <div className="flex flex-wrap gap-2">
-                    {category.skills.map((skill) => (
-                      <span
-                        key={skill}
-                        className="px-3 py-1 rounded-xl bg-cream-100 dark:bg-neutral-800/60 border border-neutral-200 dark:border-neutral-700/60 text-xs font-medium text-neutral-800 dark:text-neutral-200 hover:border-brand-orange transition-all"
-                      >
-                        {skill}
-                      </span>
-                    ))}
+                  <div className="flex flex-wrap gap-2.5">
+                    {category.skills.map((skill) => {
+                      const techInfo = techIconsMap[skill] || { icon: Code2, color: "text-brand-orange bg-brand-orange/10 border-brand-orange/20" };
+                      const SkillIcon = techInfo.icon;
+                      return (
+                        <div
+                          key={skill}
+                          className={`inline-flex items-center gap-2 px-3 py-1.5 rounded-xl border text-xs font-semibold shadow-xs transition-all duration-300 hover:scale-105 ${techInfo.color}`}
+                        >
+                          <SkillIcon className="w-3.5 h-3.5 flex-shrink-0" />
+                          <span>{skill}</span>
+                        </div>
+                      );
+                    })}
                   </div>
                 </div>
               </div>
@@ -90,3 +135,4 @@ export default function Skills() {
     </section>
   );
 }
+

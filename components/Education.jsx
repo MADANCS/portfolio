@@ -1,8 +1,10 @@
 'use client';
 
 import { portfolioData } from '@/app/lib/data';
-import { GraduationCap, Award, CheckCircle2, ExternalLink } from 'lucide-react';
+import { GraduationCap, Award, CheckCircle2, ExternalLink, BookOpen, School, Code2 } from 'lucide-react';
 import { LinkedinIcon } from '@/components/Icons';
+
+const degreeIcons = [GraduationCap, Code2, BookOpen, School];
 
 export default function Education() {
   return (
@@ -23,39 +25,42 @@ export default function Education() {
 
         {/* Education Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          {portfolioData.education.map((item, idx) => (
-            <div
-              key={idx}
-              className="editorial-card bg-white dark:bg-neutral-900 p-8 rounded-3xl border border-neutral-200 dark:border-neutral-800 shadow-sm flex flex-col justify-between"
-            >
-              <div>
-                <div className="flex items-center justify-between mb-6">
-                  <div className="w-12 h-12 rounded-2xl bg-cream-100 dark:bg-neutral-800 border border-neutral-200 dark:border-neutral-700 flex items-center justify-center text-brand-orange">
-                    <GraduationCap className="w-6 h-6" />
+          {portfolioData.education.map((item, idx) => {
+            const DegreeIcon = degreeIcons[idx] || GraduationCap;
+            return (
+              <div
+                key={idx}
+                className="editorial-card bg-white dark:bg-neutral-900 p-8 rounded-3xl border border-neutral-200 dark:border-neutral-800 shadow-sm flex flex-col justify-between hover:border-brand-orange/50 transition-all"
+              >
+                <div>
+                  <div className="flex items-center justify-between mb-6">
+                    <div className="w-12 h-12 rounded-2xl bg-cream-100 dark:bg-neutral-800 border border-neutral-200 dark:border-neutral-700 flex items-center justify-center text-brand-orange">
+                      <DegreeIcon className="w-6 h-6" />
+                    </div>
+                    <span className="px-3.5 py-1 rounded-full text-xs font-mono font-bold text-brand-orange bg-brand-orange/10 border border-brand-orange/20">
+                      {item.year}
+                    </span>
                   </div>
-                  <span className="px-3.5 py-1 rounded-full text-xs font-mono font-bold text-brand-orange bg-brand-orange/10 border border-brand-orange/20">
-                    {item.year}
-                  </span>
-                </div>
 
-                <h3 className="text-2xl font-extrabold text-neutral-900 dark:text-white mb-2">
-                  {item.degree}
-                </h3>
-                <p className="text-brand-orange font-bold text-sm mb-1">
-                  {item.institution}
-                </p>
-                {item.university && item.university !== item.institution && (
-                  <p className="text-xs font-mono text-neutral-400 mb-4">
-                    Affiliated: {item.university}
+                  <h3 className="text-2xl font-extrabold text-neutral-900 dark:text-white mb-2">
+                    {item.degree}
+                  </h3>
+                  <p className="text-brand-orange font-bold text-sm mb-1">
+                    {item.institution}
                   </p>
-                )}
+                  {item.university && (
+                    <p className="text-xs font-mono text-neutral-500 dark:text-neutral-400 mb-4 inline-block px-2.5 py-0.5 rounded bg-neutral-100 dark:bg-neutral-800 border border-neutral-200 dark:border-neutral-700">
+                      Affiliation: {item.university}
+                    </p>
+                  )}
 
-                <p className="text-neutral-600 dark:text-neutral-300 text-sm leading-relaxed mt-4">
-                  {item.details}
-                </p>
+                  <p className="text-neutral-600 dark:text-neutral-300 text-sm leading-relaxed mt-3">
+                    {item.details}
+                  </p>
+                </div>
               </div>
-            </div>
-          ))}
+            );
+          })}
         </div>
 
         {/* Certifications Card */}
